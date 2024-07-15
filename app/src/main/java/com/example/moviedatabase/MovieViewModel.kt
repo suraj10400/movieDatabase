@@ -1,5 +1,6 @@
 package com.example.moviedatabase
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -21,6 +22,7 @@ class MovieViewModel : ViewModel() {
 
     init {
         fetchMovies()
+        Log.d("2222", "init called: ")
     }
 
     fun updateNowPlayingMovies(movies: List<Movie>) {
@@ -35,6 +37,7 @@ class MovieViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _trendingMovies.value = RetrofitInstance.api.getPopularMovies().results
+                Log.d("2222", "fetchMovies: _trendingMovies.value")
                 _upcomingMovies.value = RetrofitInstance.api.getUpcomingMovies().results
             } catch (e: Exception) {
                 //

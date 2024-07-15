@@ -20,7 +20,7 @@ object RetrofitInstance {
                             .newBuilder()
                             .addHeader(
                                 "Authorization",
-                                "Bearer test"
+                                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjg4ZTI4MWRjYTVmOWM0NGY4NzFhNmVhYTJmODMxMCIsIm5iZiI6MTcxOTU2NTAzMS4zODgzNDcsInN1YiI6IjY2N2U3YTcyZGI2Njc1YzMyYjhkNzI0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aZtcEIuonqZH3BFArwQ3Z0QX5ysYpPaUglyINAFuLBo"
                             )
                             .build()
                         chain.proceed(request)
